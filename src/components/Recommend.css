@@ -1,0 +1,36 @@
+.rec {
+  color: whitesmoke;
+  margin-left: 10px;
+}
+
+#recommend {
+  border-bottom: 1px solid whitesmoke;
+  width: 99%;
+}
+
+#img-container {
+  width: 150px;
+}
+
+.list-img {
+  display: flex;
+}
+
+.list-img img{
+  width: 150px;
+  transform: scale(0.9);
+}
+
+.list-img img:hover {
+  transform: scale(1);
+}
+
+#rec-vote {
+  font-size: 13px;
+}
+
+#rec-title {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
