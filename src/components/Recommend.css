@@ -1,20 +1,19 @@
 .rec {
   color: whitesmoke;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 #recommend {
   border-bottom: 1px solid whitesmoke;
-  width: 98%;
+  width: 99%;
 }
 
 #img-container {
-  width: 200px;
+  width: 150px;
 }
 
 .list-img {
   display: flex;
-  margin-right: 10px;
 }
 
 .list-img img{
