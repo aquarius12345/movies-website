@@ -23,7 +23,7 @@ class Popular extends React.Component {
 
   render() {
     return (
-      <Recommend name="Popular" data={this.state.data}/>
+      <Recommend name="Popular" data={this.state.data} link="popular"/>
     );
   };
 };

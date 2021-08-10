@@ -24,7 +24,7 @@ class TopRated extends React.Component {
   render() {
     return(
       <div>
-        <Recommend name="Top Rated" data={this.state.data}/>
+        <Recommend name="Top Rated" data={this.state.data} link="top-rated"/>
       </div>
     );
   };

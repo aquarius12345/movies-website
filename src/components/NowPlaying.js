@@ -27,7 +27,7 @@ class NowPlaying extends React.Component {
   render() {
     return(
       <div>
-        <Recommend name="Now Playing" data={this.state.data}/>
+        <Recommend name="Now Playing" data={this.state.data} link="nowplaying"/>
       </div>
     );
   };
