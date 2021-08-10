@@ -28,10 +28,15 @@
 }
 
 #finded {
-  width: 200px;
+  width: 230px;
 }
 
 #finded-container {
   display: flex;
+  margin-top: 50px;
+}
+
+#rec-container {
+  margin-top: 50px;
 }
 
