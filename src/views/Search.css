@@ -1,16 +1,24 @@
 #search {
-  border: 0;
   outline: 0;
-  border-bottom: 1px solid whitesmoke;
+  border: none;
   background-color: black;
-  width: 800px;
+  width: 500px;
+  height: 35px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  text-align: center;
+  margin-top: -40px;
   font-size: 20px;
   caret-color: whitesmoke;
   color: white;
+}
+
+#search-box {
+  outline: 0;
+  border: 1px solid whitesmoke;
+  width: 600px;
+  height: 45px;
+  border-radius: 25px;
+  margin-top: 50px;
 }
 
 .search-bar {
@@ -23,8 +31,8 @@
 #search-img {
   width: 20px;
   position: absolute;
-  left: 320px;
-  top: 45px;
+  left: 430px;
+  top: 60px;
 }
 
 #finded {

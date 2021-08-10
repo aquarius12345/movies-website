@@ -5,6 +5,7 @@ import NowPage from './views/NowPage';
 import Search from './views/Search';
 import PopularPage from './views/PopularPage';
 import TopRatedPage from './views/TopRatedPage';
+import MovieDetails from './views/MovieDetails';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/nowplaying" component={NowPage}/>
         <Route exact path="/popular" component={PopularPage}/>
         <Route exact path="/top-rated" component={TopRatedPage}/>
+        <Route exact path="/movie-details/:id" component={MovieDetails}/>
       </Switch>
 
       <p>------Aqui tb no App vai o Footer------</p>

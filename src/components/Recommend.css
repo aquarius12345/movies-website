@@ -13,6 +13,10 @@
   margin: 10px;
 }
 
+#recommend:hover {
+  color: rgb(244,255,82);
+}
+
 #img-container {
   width: 150px;
 }
