@@ -2,6 +2,7 @@ import React from 'react';
 import Recommend from './Recommend';
 import axios from 'axios';
 
+
 class TopRated extends React.Component {
   
   state = { 

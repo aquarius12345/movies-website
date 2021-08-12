@@ -23,7 +23,7 @@ function App() {
         <Route exact path="/movie-details/:id" component={MovieDetails}/>
       </Switch>
 
-      <p>------Aqui tb no App vai o Footer------</p>
+      <p>-----------------------Aqui tb no App vai o Footer----------------------</p>
 
     </div>
   );
