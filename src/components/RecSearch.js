@@ -3,7 +3,6 @@ import React from 'react';
 import GenreCard from '../components/GenreCard';
 
 
-
 class RecSearch extends React.Component {
   
   state = {
@@ -18,6 +17,9 @@ class RecSearch extends React.Component {
     const fifthrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=5";
     const sixthrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=6";
     const seventhrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=7";
+    const eightrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=8";
+    const ninethrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=9";
+    
 
 
     axios.all([axios.get(firstrequest),
@@ -26,12 +28,15 @@ class RecSearch extends React.Component {
            axios.get(fourthrequest),
            axios.get(fifthrequest),
            axios.get(sixthrequest),
-           axios.get(seventhrequest)])
-     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse) => {  
+           axios.get(seventhrequest),
+           axios.get(eightrequest),
+           axios.get(ninethrequest)])
+     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse, eightResponse, ninethResponse) => {  
         //console.log(firstResponse.data.results,secondResponse.data.results, thirdResponse.data.results);
         this.setState ({
           data: [...firstResponse.data.results, ...secondResponse.data.results, ...thirdResponse.data.results, 
-                ...fourthResponse.data.results, ...fifthResponse.data.results, ...sixthResponse.data.results, ...seventhResponse.data.results]
+                ...fourthResponse.data.results, ...fifthResponse.data.results, ...sixthResponse.data.results, 
+                ...seventhResponse.data.results, ...eightResponse.data.results, ...ninethResponse.data.results]
         });
      }));
   
