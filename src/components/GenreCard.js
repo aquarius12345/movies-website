@@ -11,23 +11,23 @@ function GenreCard(props) {
   //console.log('filtered', filtered);
   
   return(
-
-    <div className="rec" id="overflow">
+    
+    <div className="rec">
       <h3 id="genre-name">{props.genre}</h3>
       <div className="list-img">
-      {filtered.map((el)=> <div id="img-container">
-      <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
-        <img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
-      </Link> 
-      <div className="span-container">
-        <span id="rec-vote">{"⭐"}{el.vote_average}</span>
-      <Link style={{ textDecoration: 'none' , color: 'white'}} to={`/movie-details/${el.id}`}>
-        <span id="genre-title">{el.original_title}</span>
-      </Link>
-      </div>
-      </div>)}
-    </div>  
-  </div>
+        {filtered.map((el)=> <div id="img-container">
+        <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
+          <img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
+        </Link> 
+        <div className="span-container">
+          <span id="rec-vote">{"⭐"}{el.vote_average}</span>
+        <Link style={{ textDecoration: 'none' , color: 'white'}} to={`/movie-details/${el.id}`}>
+          <span id="genre-title">{el.original_title}</span>
+        </Link>
+        </div>
+        </div>)}
+      </div>  
+    </div>
   
   );
 };

@@ -23,10 +23,9 @@ class NowPlaying extends React.Component {
     });
   };
   
-
   render() {
     return(
-      <div className="now-marg">
+      <div>
         <Recommend name="Now Playing" data={this.state.data} link="nowplaying"/>
       </div>
     );

@@ -20,8 +20,7 @@ function Recommend(props) {
         </Link>
         </div>
         </div>)}
-      </div>
-      
+      </div>  
     </div>
   );
 };

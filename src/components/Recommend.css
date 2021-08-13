@@ -1,13 +1,13 @@
 .rec {
   color: whitesmoke;
-  margin-left: 25px;
-  margin-right: 10px;
+  margin: 0 auto;
   margin-top: 30px;
   background-color: rgb(20, 20, 20);
-  height: 345px;
-  width: 1370px;
+  height: 347px;
+  width: 97%;
   overflow-x: scroll;
   overflow-y: hidden;
+  font-size: 12px;
 }
 
 .rec::-webkit-scrollbar {
@@ -17,14 +17,10 @@
 
 .rec::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: rgb(43, 42, 42);
-  width: 10px;
-
+  background-color: rgb(43, 42, 42);  
 }
 
 #recommend {
-  /* border-bottom: 1px solid whitesmoke; */
-  width: 99%;
   color: white;
   margin: 10px;
   border-style: none;
@@ -40,7 +36,7 @@
 
 .list-img {
   display: flex;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .list-img img{
