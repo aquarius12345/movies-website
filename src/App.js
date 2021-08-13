@@ -6,14 +6,13 @@ import Search from './views/Search';
 import PopularPage from './views/PopularPage';
 import TopRatedPage from './views/TopRatedPage';
 import MovieDetails from './views/MovieDetails';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <div className="App">
-
-      <p>-----Carlos: Aqui no App tem que ficar o Header - pode deletar esta msg----</p>
-
+      <Header/>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/search" component={Search}/>
