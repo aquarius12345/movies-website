@@ -47,11 +47,10 @@ class NowPage extends React.Component {
   render() {
     //console.log('this is data', this.state.data);
     return (
-      <div className="now">
+      <div>
         <CarousselNow data={this.state.data}/>
         <h1 id="nowpage-title">Now Playing</h1>
-        {/* {this.state.data.map((el)=> <div><img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/></div>)} */}
-        
+    
         <GenreCard data={this.state.data} genre="Science Fiction" genreNum={878}/>
         <GenreCard data={this.state.data} genre="Comedy" genreNum={35}/>
         <GenreCard data={this.state.data} genre="Drama" genreNum={18}/>

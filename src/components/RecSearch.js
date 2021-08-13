@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React from 'react';
 import GenreCard from '../components/GenreCard';
+import './Recommend.css';
+import './RecSearch.css';
 
 
 class RecSearch extends React.Component {
@@ -46,8 +48,7 @@ class RecSearch extends React.Component {
   render() {
     //console.log('this is data', this.state.data);
     return (
-      <div className="now">
-        {/* {this.state.data.map((el)=> <div><img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/></div>)} */}
+      <div className="search-width">
         <GenreCard data={this.state.data} genre="Recommend" genreNum={35}/>
       </div>
     );

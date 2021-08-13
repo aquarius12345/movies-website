@@ -15,7 +15,7 @@
 #search-box {
   outline: 0;
   border: 1px solid whitesmoke;
-  width: 600px;
+  width: 50%;
   height: 45px;
   border-radius: 25px;
   margin-top: 50px;
@@ -32,12 +32,8 @@
 #search-img {
   width: 20px;
   position: absolute;
-  left: 430px;
+  left: 400px;
   top: 60px;
-}
-
-#finded {
-  width: 230px;
 }
 
 #finded-container {

@@ -30,7 +30,6 @@ class TopRated extends React.Component {
     );
   };
 
-
 };
 
 export default TopRated;

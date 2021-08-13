@@ -1,6 +1,8 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './CarousselNow.css';
 
 
 function CarousselTop(props) {
