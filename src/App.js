@@ -7,6 +7,7 @@ import PopularPage from './views/PopularPage';
 import TopRatedPage from './views/TopRatedPage';
 import MovieDetails from './views/MovieDetails';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -21,9 +22,9 @@ function App() {
         <Route exact path="/top-rated" component={TopRatedPage}/>
         <Route exact path="/movie-details/:id" component={MovieDetails}/>
       </Switch>
-
-      <p>-----------------------Aqui tb no App vai o Footer----------------------</p>
-
+      <br></br>
+      <Footer/>
+    
     </div>
   );
 }
