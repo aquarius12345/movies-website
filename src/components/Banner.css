@@ -4,8 +4,6 @@
   background-image: url("https://thegeekiverse.com/wp-content/uploads/2018/04/avengers-header.jpg");
   background-size: cover;
   background-position: center;
- 
-
 }
 
 #banner-title {
@@ -14,8 +12,7 @@
   padding-top: 230px;
   padding-left: 60px;
   line-height: 100px;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-shadow: 4px 10px 7px black;
 }
 
@@ -31,5 +28,5 @@
 }
 
 #banner-btn:hover {
-  background-color: rgba(245, 245, 245, 0.7);
+  background-color: rgba(221, 217, 217, 0.5);
 }

@@ -14,21 +14,25 @@ function CarousselPop(props) {
         {props.data.map((el)=> 
           <Carousel.Item>
           <Link to={`/movie-details/${el.id}`}>
-            <img
-            className="d-block w-100"
-            src= {`https://image.tmdb.org/t/p/original/${el.backdrop_path}`}
-            alt={el.name}
-            />
+            <div>
+              <img 
+              className="d-block w-100"
+              src= {`https://image.tmdb.org/t/p/original/${el.backdrop_path}`}
+              alt={el.name}
+              />
+            </div>
+            
           </Link>
           <Carousel.Caption>
             <div id="caroussel-now">
               <h3>{el.original_title}</h3>
-              <p>{el.overview}</p>
+              <p>{el.overview.slice(0, 200)}...</p>
             </div>
           </Carousel.Caption>
           </Carousel.Item>
         )} 
       </Carousel>
+      <div className="shadow"></div>
     </div>
   );
 };

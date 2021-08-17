@@ -6,8 +6,20 @@
 }
 
 .carousel {
-  width: 900px;
-  margin: 0 auto;
-  padding: 50px;
+  width: 50%;
+  margin: 0px auto;
+  padding-top: 60px;
 }
+
+.shadow {
+  background: radial-gradient(circle, rgba(255,255,255,0) 47%, rgba(11,11,11,1) 96%);
+  width: 50%;
+  height: 405px;
+  padding-top: 30px;
+  position: absolute;
+  top: 56px;
+  left: 356px;
+}
+
+
 
