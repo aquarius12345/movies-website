@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React from 'react';
 import GenreCard from '../components/GenreCard';
-import './NowPage.css';
 import CarousselNow from '../components/CarousselNow';
+import './NowPage.css';
 
 
 class NowPage extends React.Component {
@@ -21,6 +21,8 @@ class NowPage extends React.Component {
     const seventhrequest = "https://api.themoviedb.org/3/movie/now_playing?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=7";
     const eighthrequest = "https://api.themoviedb.org/3/movie/now_playing?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=8";
     const ninethrequest = "https://api.themoviedb.org/3/movie/now_playing?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=9";
+    const tenrequest = "https://api.themoviedb.org/3/movie/now_playing?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=10";
+    const elevenrequest = "https://api.themoviedb.org/3/movie/now_playing?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=11";
 
 
     axios.all([axios.get(firstrequest),
@@ -31,13 +33,16 @@ class NowPage extends React.Component {
            axios.get(sixthrequest),
            axios.get(seventhrequest),
            axios.get(eighthrequest),
-           axios.get(ninethrequest)])
-     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse, eightResponse, ninethResponse) => {  
+           axios.get(ninethrequest),
+           axios.get(tenrequest),
+           axios.get(elevenrequest)])
+     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse, eightResponse, ninethResponse, tenResponse, elevenResponse) => {  
         //console.log(firstResponse.data.results,secondResponse.data.results, thirdResponse.data.results);
         this.setState ({
           data: [...firstResponse.data.results, ...secondResponse.data.results, ...thirdResponse.data.results, 
                 ...fourthResponse.data.results, ...fifthResponse.data.results, ...sixthResponse.data.results, 
-                ...seventhResponse.data.results, ...eightResponse.data.results, ...ninethResponse.data.results]
+                ...seventhResponse.data.results, ...eightResponse.data.results, ...ninethResponse.data.results,
+                ...tenResponse.data.results, ...elevenResponse.data.results]
         });
      }));
   
@@ -48,6 +53,7 @@ class NowPage extends React.Component {
     //console.log('this is data', this.state.data);
     return (
       <div>
+       
         <CarousselNow data={this.state.data}/>
         <h1 id="nowpage-title">Now Playing</h1>
     
@@ -55,6 +61,7 @@ class NowPage extends React.Component {
         <GenreCard data={this.state.data} genre="Comedy" genreNum={35}/>
         <GenreCard data={this.state.data} genre="Drama" genreNum={18}/>
         <GenreCard data={this.state.data} genre="Animation" genreNum={16}/>
+      
       </div>
     );
   };

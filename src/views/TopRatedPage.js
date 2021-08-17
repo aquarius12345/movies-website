@@ -13,7 +13,7 @@ class TopRatedPage extends React.Component {
 
   componentDidMount() {
     const firstrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=1";
-    const secondrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=11";
+    const secondrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=2";
     const thirdrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=3";
     const fourthrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=4";
     const fifthrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=5";
@@ -21,6 +21,9 @@ class TopRatedPage extends React.Component {
     const seventhrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=7";
     const eightrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=8";
     const ninethrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=9";
+    const tenrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=10";
+    const eleventrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=11";
+    const twelverequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=12";
 
 
     axios.all([axios.get(firstrequest),
@@ -31,13 +34,17 @@ class TopRatedPage extends React.Component {
            axios.get(sixthrequest),
            axios.get(seventhrequest),
            axios.get(eightrequest),
-           axios.get(ninethrequest)])
-     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse, eightResponse, ninethResponse) => {  
+           axios.get(ninethrequest),
+           axios.get(tenrequest),
+           axios.get(eleventrequest),
+           axios.get(twelverequest)])
+     .then(axios.spread((firstResponse, secondResponse, thirdResponse, fourthResponse, fifthResponse, sixthResponse, seventhResponse, eightResponse, ninethResponse, tenResponse, elevenResponse, twelveResponse) => {  
         //console.log(firstResponse.data.results,secondResponse.data.results, thirdResponse.data.results);
         this.setState ({
           data: [...firstResponse.data.results, ...secondResponse.data.results, ...thirdResponse.data.results, 
                 ...fourthResponse.data.results, ...fifthResponse.data.results, ...sixthResponse.data.results, 
-                ...seventhResponse.data.results, ...eightResponse.data.results, ...ninethResponse.data.results]
+                ...seventhResponse.data.results, ...eightResponse.data.results, ...ninethResponse.data.results,
+                ...tenResponse.data.results, ...elevenResponse.data.results, ...twelveResponse.data.results]
         });
      }));
   

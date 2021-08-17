@@ -22,12 +22,13 @@ function CarousselTop(props) {
           <Carousel.Caption>
             <div id="caroussel-now">
               <h3>{el.original_title}</h3>
-              <p>{el.overview}</p>
+              <p>{el.overview.slice(0, 200)}...</p>
             </div>
           </Carousel.Caption>
           </Carousel.Item>
         )} 
       </Carousel>
+      <div className="shadow"></div>
     </div>
   );
 };

@@ -1,4 +1,16 @@
 #nowpage-title {
   color: rgb(244,255,82);
-  margin-left: 20px;
+  margin: 30px 30px 20px;
+  font-size: 32px;
 }
+
+#genre-name {
+  font-size: 25px;
+  margin: 20px 30px 5px;
+}
+
+#genre-btn {
+  margin-left: -20px;
+}
+
+
