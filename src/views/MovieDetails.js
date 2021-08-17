@@ -1,5 +1,4 @@
-import Bluebird from 'bluebird'
-import { BackgroundColor, Color } from 'jest-matcher-utils/node_modules/chalk'
+import axios from 'axios'
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
@@ -8,24 +7,44 @@ import styled from 'styled-components'
 
 
 class MovieDetails extends Component {
-    
+    state = {
+        movies:[]
+    }
+
+    componentDidMount(){
+        this.getData()
+    }
+
+    getData(){
+        axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=34c0e6ee9353d4514d2f2c4122f49ae3&language=en-US
+        `)
+         .then((result)=> {
+             console.log(result)
+            this.setState({
+                movies:result.data
+            })
+        })
+           
+
+      }
+        
     
     render() {
         return (
-            <Container>
-                <h2>nome do filme</h2>
-            </Container>
+            <Card>
+                <h2>{this.state.movies.original_title}</h2>
+                
+                
+            </Card>
         
         )
     }
 }
 
-const Container = styled.div `
+const Card = styled.div `
    height: 500px;
-   background-color: black;
-
-  
-
+  background: white;
+  color: black;
 
 `;
 
