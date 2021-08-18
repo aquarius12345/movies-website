@@ -34,6 +34,7 @@ class MovieDetails extends Component {
             <Card>
                 <h2>{this.state.movies.title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w500/${this.state.movies.backdrop_path}`} alt="postermovie"/>
+                <img src={`https://image.tmdb.org/t/p/w300/${this.state.movies.poster_path}`} alt="postermovie"/>
                 
             </Card>
         
@@ -44,11 +45,13 @@ class MovieDetails extends Component {
 const Card = styled.div `
    height: 700px;
    background: black;
+   display: flex;
    
 
   h2{
       color: tomato;
-      padding-top: 50px;
+      padding-top: 70px;
+      
   }
   
       
