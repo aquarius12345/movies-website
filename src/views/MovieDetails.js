@@ -34,7 +34,7 @@ class MovieDetails extends Component {
             <Card>
                 <h2>{this.state.movies.title}</h2>
                 <img src={`https://image.tmdb.org/t/p/w500/${this.state.movies.backdrop_path}`} alt="postermovie"/>
-                <img src={`https://image.tmdb.org/t/p/w300/${this.state.movies.poster_path}`} alt="postermovie"/>
+                <img src={`https://image.tmdb.org/t/p/w200/${this.state.movies.poster_path}`} alt="postermovie"/>
                 
             </Card>
         
