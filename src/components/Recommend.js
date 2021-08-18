@@ -33,11 +33,10 @@ function Recommend(props) {
             <img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
           </Link> 
           <div className="span-container">
-            {/* <span id="rec-vote">{"⭐"}{el.vote_average}</span> */}
-          <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
-            <span id="rec-vote">{"⭐"}{el.vote_average}</span>
-            <span id="rec-title">{el.original_title.length > 30 ? el.original_title.slice(0,30)+"...":el.original_title}</span>
-          </Link>
+            <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
+              <span id="rec-vote">{"⭐"}{el.vote_average}</span>
+              <span id="rec-title">{el.original_title.length > 30 ? el.original_title.slice(0,30)+"...":el.original_title}</span>
+            </Link>
           </div>
           </div>)}
         </div>  

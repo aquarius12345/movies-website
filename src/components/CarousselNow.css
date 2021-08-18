@@ -1,25 +1,30 @@
 #caroussel-now {
   font-weight: 600;
   color: whitesmoke;
-  background-color: rgba(85, 85, 84, 0.3);
   border-radius: 10px;
+  position: absolute;
+  z-index: 100;
+  top: -120px;
 }
 
 .carousel {
   width: 50%;
   margin: 0px auto;
-  padding-top: 60px;
+  padding-top: 80px;
+  position: relative;
 }
 
 .shadow {
-  background: radial-gradient(circle, rgba(255,255,255,0) 47%, rgba(11,11,11,1) 96%);
+  background: linear-gradient(0deg, rgba(14,14,14,1) 5%, rgba(17,16,16,0.6558998599439776) 41%, rgba(202,210,212,0) 79%);
   width: 50%;
   height: 405px;
   padding-top: 30px;
   position: absolute;
-  top: 56px;
+  top: 80px;
   left: 356px;
 }
+
+
 
 
 

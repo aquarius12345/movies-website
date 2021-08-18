@@ -7,6 +7,7 @@
     left: 0;
     align-items: center;
     padding: 0px 28px;
+    z-index: 1000;
    
 }
 .Logo{
