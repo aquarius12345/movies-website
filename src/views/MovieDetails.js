@@ -32,8 +32,8 @@ class MovieDetails extends Component {
     render() {
         return (
             <Card>
-                <h2>{this.state.movies.original_title}</h2>
-                
+                <h2>{this.state.movies.title}</h2>
+                <img src={`https://image.tmdb.org/t/p/w500/${this.state.movies.backdrop_path}`} alt="postermovie"/>
                 
             </Card>
         
@@ -42,9 +42,17 @@ class MovieDetails extends Component {
 }
 
 const Card = styled.div `
-   height: 500px;
-  background: white;
-  color: black;
+   height: 700px;
+   background: black;
+   
+
+  h2{
+      color: tomato;
+      padding-top: 50px;
+  }
+  
+      
+  }
 
 `;
 
