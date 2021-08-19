@@ -1,0 +1,96 @@
+import React from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './DropdownS.css';
+
+
+class DropdownS extends React.Component {
+  
+    constructor(props) {
+        super(props);
+        //console.log('this is props', props);
+        this.state = {
+            data: [],
+            input: ''
+        };
+    };
+      
+    
+      componentDidUpdate(prevState) {
+        if (this.state.input !== prevState.input){
+          return this.getData();
+        };  
+      };
+      
+    
+      getData = () => {
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&query=${this.state.input}&page=1&include_adult=false`)
+          .then((result)=>{
+            //console.log('this is', result)
+            this.setState({
+              data: result.data.results
+            });
+          });
+      };
+
+      handleInputChange = (event) => {
+        let value = event.target.value
+        
+        this.setState({
+          input: value,
+        }); 
+      };
+
+      // handleSearchResult = (event) => {
+      //   let searchRes = document.querySelector(".d-container");
+      //   console.log('this is', searchRes);
+
+      //   if(event.target.className !== searchRes) {
+      //     searchRes.style.display = "none";
+      //   };
+      // };
+
+
+    render() {
+      const slicedData = this.state.data.slice(0, 5);
+
+      return (
+        <div>
+          <div className="principal">
+      
+            <form autoComplete="off">
+              <img id="d-icon" src="https://icon-library.com/images/white-search-icon-transparent-background/white-search-icon-transparent-background-1.jpg"/>
+              <input type="search" id="d-search" value={this.state.input} placeholder="search" onChange={this.handleInputChange}/> 
+            </form>
+
+            <ul className="d-container">
+
+              {this.state.input === '' ? [] : slicedData.map((el)=> <li key={el.id} className="d-card">
+                
+                <Link style={{color: "white", textDecoration: "none"}} to={`/movie-details/${el.id}`}>
+                  <img id="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
+                  <span id="d-span">{el.title}</span>
+                </Link>
+              </li>
+              )}
+
+              {/* {slicedData.map((el)=> <li key={el.id} className="d-card">
+                
+                <Link style={{color: "white", textDecoration: "none"}} to={`/movie-details/${el.id}`}>
+                  <img id="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
+                  <span id="d-span">{el.title}</span>
+                </Link>
+              </li>
+              )} */}
+
+            </ul>
+
+          </div> 
+        </div>
+      );
+    };
+    
+     
+}
+
+export default DropdownS;
