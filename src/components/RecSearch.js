@@ -23,7 +23,6 @@ class RecSearch extends React.Component {
     const ninethrequest = "https://api.themoviedb.org/3/movie/top_rated?api_key=8011d764f63852f7bf4dda520102d6c9&language=en-US&page=9";
     
 
-
     axios.all([axios.get(firstrequest),
            axios.get(secondrequest),
            axios.get(thirdrequest),
