@@ -1,6 +1,8 @@
 import React from 'react';
 import './Banner.css';
 import { Link } from 'react-router-dom';
+import DropdownS from './DropdownS';
+
 
 
 function Banner() {
@@ -12,6 +14,8 @@ function Banner() {
         </h1>
       </div>
       <img id="ban-img" src="https://thegeekiverse.com/wp-content/uploads/2018/04/avengers-header.jpg" alt="avengers"/>
+
+      <DropdownS/>
     
     </div>
     
