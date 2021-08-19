@@ -1,0 +1,50 @@
+.view {
+    background-color: black;
+    height: 800px;
+    display: flex;
+}
+
+.card-details{
+    background-color: #1F1F1F;
+    height: 600px;
+    width: 100%;
+    margin-top: 70px
+}
+.card-details h2{
+    padding: 20px 0px 0px 65px;
+}
+.card-details p{
+    padding-left: 65px;
+    color:grey;
+}
+
+.card-poster{
+    display: flex;
+    padding: 20px 20px 0 65px;
+}
+
+.card-poster img{
+    border-radius: 7px;
+    width: 285px;
+}
+
+.trailer img{
+    width: 750px;
+    height: 428px;
+    padding-left: 7px;
+    border-radius: 7px;
+    
+    
+}
+
+
+
+.title{
+   
+   ;
+
+}
+
+.title h2{
+    
+}

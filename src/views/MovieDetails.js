@@ -1,6 +1,6 @@
-import axios from 'axios'
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import axios from 'axios';
+import React, { Component } from 'react';
+import './MoviesDetails.css';
 
 
 
@@ -31,33 +31,39 @@ class MovieDetails extends Component {
     
     render() {
         return (
-            <Card>
-                <h2>{this.state.movies.title}</h2>
-                <img src={`https://image.tmdb.org/t/p/w500/${this.state.movies.backdrop_path}`} alt="postermovie"/>
-                <img src={`https://image.tmdb.org/t/p/w200/${this.state.movies.poster_path}`} alt="postermovie"/>
-                
-            </Card>
+            <div className='view'>
+                 <div className ="card-details">
+                 <h2>{this.state.movies.title}</h2>
+                 <p><span>release: {this.state.movies.release_date},
+                  minutos: {this.state.movies.runtime} 
+                    </span></p>
+                    
+                    
+                    <div className='card-poster'>
+                        <div>
+                        <img src={`https://image.tmdb.org/t/p/w300/${this.state.movies.poster_path}`} alt="postermovie"/>
+                       {/*  <p>{this.state.movies.genres[2]}</p> */}
+                        </div>
+                    <div className ="trailer">
+                    <img src={`https://image.tmdb.org/t/p/original/${this.state.movies.backdrop_path}`} alt="postermovie"/>
+                    </div>
+
+                    </div>
+                   
+
+                    
+
+                </div>
+           
+               
+
+
+            </div>
+         
         
         )
     }
 }
-
-const Card = styled.div `
-   height: 700px;
-   background: black;
-   display: flex;
-   
-
-  h2{
-      color: tomato;
-      padding-top: 70px;
-      
-  }
-  
-      
-  }
-
-`;
 
 
 export default MovieDetails;
