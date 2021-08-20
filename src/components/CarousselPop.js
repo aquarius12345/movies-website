@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './CarousselNow';
+import './CarousselNow.css';
 
 
 
@@ -31,8 +31,9 @@ function CarousselPop(props) {
           </Carousel.Caption>
           </Carousel.Item>
         )} 
+        <div className="shadow"></div>
       </Carousel>
-      <div className="shadow"></div>
+    
     </div>
   );
 };

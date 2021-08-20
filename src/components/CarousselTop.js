@@ -27,8 +27,9 @@ function CarousselTop(props) {
           </Carousel.Caption>
           </Carousel.Item>
         )} 
+        <div className="shadow"></div>
       </Carousel>
-      <div className="shadow"></div>
+      
     </div>
   );
 };
