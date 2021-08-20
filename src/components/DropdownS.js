@@ -58,16 +58,18 @@ class DropdownS extends React.Component {
 
             <ul className="d-container">
 
-              {this.state.input === '' ? [] : slicedData.map((el)=> <li key={el.id} className="d-card">
-                
+              {this.state.input === '' ? [] : slicedData.map((el)=> 
+               
                 <Link style={{color: "white", textDecoration: "none"}} to={`/movie-details/${el.id}`}>
+                  <li key={el.id} className="d-card">
                   {el.poster_path === null ? <img className="d-img" src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"/>
                   :
                   <img className="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/> 
                   } 
                   <span id="d-span">{el.title}</span>
+                  </li>
                 </Link>
-              </li>
+              
               )}
 
             </ul>
