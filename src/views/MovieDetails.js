@@ -1,6 +1,6 @@
-import axios from 'axios'
-import React, { Component } from 'react'
-import styled from 'styled-components'
+import axios from 'axios';
+import React, { Component } from 'react';
+import './MoviesDetails.css';
 
 
 
@@ -8,56 +8,67 @@ import styled from 'styled-components'
 
 class MovieDetails extends Component {
     state = {
-        movies:[]
+        movies: []
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.getData()
     }
 
-    getData(){
+    getData() {
         axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=34c0e6ee9353d4514d2f2c4122f49ae3&language=en-US
         `)
-         .then((result)=> {
-             console.log(result)
-            this.setState({
-                movies:result.data
+            .then((result) => {
+                console.log(result)
+                this.setState({
+                    movies: result.data
+                })
             })
-        })
-           
 
-      }
-        
-    
+
+    }
+
+
     render() {
         return (
-            <Card>
-                <h2>{this.state.movies.title}</h2>
-                <img src={`https://image.tmdb.org/t/p/w500/${this.state.movies.backdrop_path}`} alt="postermovie"/>
-                <img src={`https://image.tmdb.org/t/p/w200/${this.state.movies.poster_path}`} alt="postermovie"/>
-                
-            </Card>
-        
+            <div className='view'>
+                <div className="card-details">
+                    <h2>{this.state.movies.title}</h2>
+                    <p><span>release: {this.state.movies.release_date},
+                        minutos: {this.state.movies.runtime}
+                    </span></p>
+
+
+                    <div className='card-poster'>
+                        <div>
+                            <img src={`https://image.tmdb.org/t/p/w300/${this.state.movies.poster_path}`} alt="postermovie" />
+
+                        </div>
+                        <div className="trailer">
+                            <img src={`https://image.tmdb.org/t/p/original/${this.state.movies.backdrop_path}`} alt="postermovie" />
+
+                        </div>
+
+                        <div className='rating'>
+                            <h3>RATING: {this.state.movies.vote_average}</h3> 
+                        </div>
+
+                    </div>
+
+                    <div className='overview'>
+
+                        <h3>Overview:</h3>
+                        <p>{this.state.movies.overview}</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+
         )
     }
 }
-
-const Card = styled.div `
-   height: 700px;
-   background: black;
-   display: flex;
-   
-
-  h2{
-      color: tomato;
-      padding-top: 70px;
-      
-  }
-  
-      
-  }
-
-`;
 
 
 export default MovieDetails;
