@@ -46,12 +46,24 @@ class MovieDetails extends Component {
                         </div>
                     <div className ="trailer">
                     <img src={`https://image.tmdb.org/t/p/original/${this.state.movies.backdrop_path}`} alt="postermovie"/>
+                    
                     </div>
 
+                  
+
                     </div>
-                   
+
+                        <div className='overview'>
+                            <h3>Overview:</h3>
+                            <p>{this.state.movies.overview}</p>
+
+
+                        </div>
+
 
                     
+                   
+
 
                 </div>
            
