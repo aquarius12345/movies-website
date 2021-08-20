@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
         <footer className='footer'>
             <div className='menu'>
              <Link to='/'><img src={logo} alt="Logo" className ='Logo'/></Link>
-             <Link to='/movies' className='link'>MOVIES</Link>
+             <Link to='/nowplaying' className='link'>NOW PLAYING</Link>
              <Link to='/popular' className='link'>POPULAR</Link>
              <Link to='/top-rated' className='link'>TOP RATED</Link>
              <br></br>
