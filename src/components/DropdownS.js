@@ -41,14 +41,7 @@ class DropdownS extends React.Component {
         }); 
       };
 
-      // handleSearchResult = (event) => {
-      //   let searchRes = document.querySelector(".d-container");
-      //   console.log('this is', searchRes);
-
-      //   if(event.target.className !== searchRes) {
-      //     searchRes.style.display = "none";
-      //   };
-      // };
+     
 
 
     render() {
@@ -68,23 +61,17 @@ class DropdownS extends React.Component {
               {this.state.input === '' ? [] : slicedData.map((el)=> <li key={el.id} className="d-card">
                 
                 <Link style={{color: "white", textDecoration: "none"}} to={`/movie-details/${el.id}`}>
-                  <img id="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
+                  {el.poster_path === null ? <img className="d-img" src="https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"/>
+                  :
+                  <img className="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/> 
+                  } 
                   <span id="d-span">{el.title}</span>
                 </Link>
               </li>
               )}
 
-              {/* {slicedData.map((el)=> <li key={el.id} className="d-card">
-                
-                <Link style={{color: "white", textDecoration: "none"}} to={`/movie-details/${el.id}`}>
-                  <img id="d-img" src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
-                  <span id="d-span">{el.title}</span>
-                </Link>
-              </li>
-              )} */}
-
             </ul>
-
+            
           </div> 
         </div>
       );

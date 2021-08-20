@@ -7,7 +7,9 @@ import './GenreCard';
 
 function GenreCard(props) {
   // let filtered = props.data.filter((el)=>el.genre_ids[0] === props.genreNum).slice(0,9);
-  let filtered = props.data.filter((el)=>el.genre_ids[0] === props.genreNum);
+  // let filtered = props.data.filter((el)=>el.genre_ids[0] === props.genreNum);
+  let filtered = props.data.filter((el)=>el.genre_ids.includes(props.genreNum));
+
 
   //console.log('data', props.data);
   //console.log('filtered', filtered);

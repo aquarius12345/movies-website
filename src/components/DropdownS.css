@@ -12,9 +12,9 @@
   border-bottom: 1px solid whitesmoke;
   outline: 0px;
   background-color: transparent;
-  caret-color: whitesmoke;
   font-size: 20px;
-  color: white;
+  caret-color: whitesmoke;
+  color: whitesmoke;
 }
 
 .d-container {
@@ -24,7 +24,7 @@
   display: block;
 }
 
-#d-img {
+.d-img {
   width: 4vw;
 }
 
