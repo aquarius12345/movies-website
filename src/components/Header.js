@@ -9,7 +9,7 @@ import icone from "../images/filme.png"
         <nav className="header">
             <Link to='/'><img src={logo} alt="Logo" className ='Logo'/></Link>
             <div className="nav">
-            <img src={icone} alt='iconeMovies' className='icon'/>
+            
             <Link to='/movies' className='link'>MOVIES</Link>
             </div>
            
