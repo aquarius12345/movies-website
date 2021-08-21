@@ -17,15 +17,17 @@
 }
 .link{
    color: white;
+   margin-right: 20px;
+   margin-top: 13px;
+
+ 
    text-decoration: none;
  
 }
-
-.icon{
-   width: 15px;
-   height: 15px;
-   padding-right: 10px;
+.link:active{
+   color: yellowgreen;
 }
+ 
 .link:hover{
    color: yellow;
 }
