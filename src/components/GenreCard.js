@@ -11,8 +11,6 @@ function GenreCard(props) {
   let filtered = props.data.filter((el)=>el.genre_ids.includes(props.genreNum));
 
 
-  //console.log('data', props.data);
-  //console.log('filtered', filtered);
   const rec = useRef(null);
 
   const handleLeftClick = (e) => {
@@ -24,6 +22,11 @@ function GenreCard(props) {
     e.preventDefault();
     rec.current.scrollLeft += rec.current.offsetWidth;
   }
+
+  const handleStorage = (key, el) => {
+    localStorage.setItem(key, JSON.stringify(el));
+  }
+
   
   return(
     <>
@@ -31,9 +34,14 @@ function GenreCard(props) {
       <div className="rec" ref={rec}>
         <div className="list-img">
           {filtered.map((el)=> <div id="img-container">
-          <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
-            <img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
-          </Link> 
+
+          <div id="image-btn-container">
+            <button id="fav-btn" onClick={()=>handleStorage(el.title, el)}>+</button>
+            <Link style={{ textDecoration: 'none' }} to={`/movie-details/${el.id}`}>
+              <img src={`https://image.tmdb.org/t/p/w300/${el.poster_path}`}/>
+            </Link> 
+          </div>
+          
           <div className="span-container">
             <span id="rec-vote">{"⭐"}{el.vote_average} </span>
           <Link style={{ textDecoration: 'none' , color: 'white'}} to={`/movie-details/${el.id}`}>

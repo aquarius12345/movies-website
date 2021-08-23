@@ -8,6 +8,8 @@ import TopRatedPage from './views/TopRatedPage';
 import MovieDetails from './views/MovieDetails';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MyList from './views/MyList';
+
 
 
 function App() {
@@ -21,6 +23,7 @@ function App() {
         <Route exact path="/popular" component={PopularPage}/>
         <Route exact path="/top-rated" component={TopRatedPage}/>
         <Route exact path="/movie-details/:id" component={MovieDetails}/>
+        <Route exact path="/my-list" component={MyList}/>
       </Switch>
       <br></br>
       <Footer/>
