@@ -41,6 +41,16 @@
 #img-container {
   width: 150px;
   object-fit: contain;
+  position: relative;
+  margin: 1px;
+}
+
+#image-btn-container {
+  transform: scale(0.9)
+}
+
+#image-btn-container:hover {
+  transform: scale(1);
 }
 
 .list-img {
@@ -51,11 +61,6 @@
 .list-img img{
   width: 150px;
   border-radius: 10px;
-  transform: scale(0.9);
-}
-
-.list-img img:hover {
-  transform: scale(1);
 }
 
 #rec-vote {
@@ -113,6 +118,21 @@ a {
   position: relative;
   top: -190px;
   left: 96.5vw;
+}
+
+#fav-btn {
+  background-color: rgb(53, 52, 52, 0.5);
+  color: white;
+  border-style: none;
+  padding: 0.6vw;
+  position: absolute;
+  z-index: 100;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+#fav-btn:hover {
+  background-color: black;
 }
 
 

@@ -33,11 +33,26 @@
   background-color: rgba(209, 209, 199, 0.1);
   border: 2px solid whitesmoke;
   border-radius: 10px;
-  margin-left: 350px;
+  margin-left: 250px;
   font-size: 25px;
 }
 
 #banner-btn:hover {
+  background-color: rgba(221, 217, 217, 0.5);
+}
+
+#my-btn {
+  padding: 15px 30px;
+  color: white;
+  font-weight: 600;
+  background-color: rgba(209, 209, 199, 0.1);
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+#my-btn:hover {
   background-color: rgba(221, 217, 217, 0.5);
 }
 
