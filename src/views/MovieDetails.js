@@ -34,8 +34,8 @@ class MovieDetails extends Component {
             <div className='view'>
                 <div className="card-details">
                     <h2>{this.state.movies.title}</h2>
-                    <p><span>release: {this.state.movies.release_date},
-                        minutos: {this.state.movies.runtime}
+                    <p><span>Release: {this.state.movies.release_date},
+                        Minutes: {this.state.movies.runtime}
                     </span></p>
 
 
@@ -51,6 +51,7 @@ class MovieDetails extends Component {
 
                         <div className='rating'>
                             <h3>RATING: {this.state.movies.vote_average}</h3> 
+                           {/*  <h6>{this.state.movies.genres.[3][3]}</h6> */}
                         </div>
 
                     </div>

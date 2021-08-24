@@ -55,11 +55,17 @@
 
 
 .overview{
-    margin:0px 65px 0px 65px;
+    margin:15px 65px 0px 65px;
+}
+.overview p{
+    border-bottom: 1px solid grey;
+    text-align: justify;
+    padding: 10px;
+    
 }
 
 .rating{
-    background: linear-gradient(to right, green, yellow);
+    border: 5px solid yellow;
     
     
     border-radius: 80px;
@@ -74,7 +80,7 @@
 }
 .rating h3{
     font-size: 18px;
-    color: black;
+    color: white;
     
    
    
