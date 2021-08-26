@@ -16,7 +16,7 @@ class MovieDetails extends Component {
     }
 
     getData() {
-        axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=34c0e6ee9353d4514d2f2c4122f49ae3&language=en-US
+        axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.id}?api_key=34c0e6ee9353d4514d2f2c4122f49ae3&append_to_response=videos,images
         `)
             .then((result) => {
                 console.log(result)
@@ -27,6 +27,8 @@ class MovieDetails extends Component {
 
 
     }
+
+    
 
 
     render() {
@@ -51,7 +53,11 @@ class MovieDetails extends Component {
 
                         <div className='rating'>
                             <h3>RATING: {this.state.movies.vote_average}</h3> 
-                           {/*  <h6>{this.state.movies.genres.[3][3]}</h6> */}
+                            {this.state.movies.genres}
+                            
+                            
+                            
+                           
                         </div>
 
                     </div>
