@@ -53,7 +53,7 @@ class MovieDetails extends Component {
 
                         <div className='rating'>
                             <h3>RATING: {this.state.movies.vote_average}</h3> 
-                            {this.state.movies.genres}
+                            
                             
                             
                             
