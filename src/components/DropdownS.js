@@ -42,8 +42,6 @@ class DropdownS extends React.Component {
       };
 
      
-
-
     render() {
       const slicedData = this.state.data.slice(0, 5);
 

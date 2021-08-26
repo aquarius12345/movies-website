@@ -1,9 +1,10 @@
 .principal {
   position:absolute;
-  top: 0.5vw;
+  top: 0.8vw;
   left: 35vw;
   z-index: 2000;
   color: whitesmoke;
+  width: 38vw;
 }
 
 #d-search {
