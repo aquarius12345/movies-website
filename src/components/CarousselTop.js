@@ -18,13 +18,14 @@ function CarousselTop(props) {
             src= {`https://image.tmdb.org/t/p/original/${el.backdrop_path}`}
             alt={el.name}
             />
-          </Link>
+          
           <Carousel.Caption>
             <div id="caroussel-now">
               <h3>{el.original_title}</h3>
               <p>{el.overview.slice(0, 200)}...</p>
             </div>
           </Carousel.Caption>
+          </Link>
           </Carousel.Item>
         )} 
         <div className="shadow"></div>
