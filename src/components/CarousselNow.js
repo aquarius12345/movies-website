@@ -14,12 +14,14 @@ function CarousselNow(props) {
           {props.data.map((el)=>
             <Carousel.Item>
             <Link to={`/movie-details/${el.id}`}>
+            
               <img
               className="d-block w-100"
               id="car-img-size"
               src= {`https://image.tmdb.org/t/p/original/${el.backdrop_path}`}
               alt={el.name}
               />
+              
             </Link>
             <Carousel.Caption>
               <div id="caroussel-now">
