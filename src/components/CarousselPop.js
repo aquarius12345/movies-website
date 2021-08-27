@@ -22,13 +22,13 @@ function CarousselPop(props) {
               />
             </div>
             
-          </Link>
           <Carousel.Caption>
             <div id="caroussel-now">
               <h3>{el.original_title}</h3>
               <p>{el.overview.slice(0, 200)}...</p>
             </div>
           </Carousel.Caption>
+          </Link>
           </Carousel.Item>
         )} 
         <div className="shadow"></div>
